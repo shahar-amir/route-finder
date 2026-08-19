@@ -1,0 +1,11 @@
+package graph;
+
+public class Node {
+    private final String id;
+
+    public Node(String id){
+        this.id = id;
+    }
+
+    public String getId(){return id;}
+}
