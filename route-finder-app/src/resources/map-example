@@ -1,0 +1,65 @@
+#Nodes: id,name,lat,lon
+N,A,Ort Alon,32.658,35.110
+N,B,Hatishbi Junction,32.677,35.105
+N,C,Zicron Yaakov,32.573,34.951
+N,D,Check Post,32.793,35.038
+N,E,Yokneam Moshava,32.671,35.113
+N,F,HaZorea,32.645,35.122
+N,G,Mishmar HaEmek,32.615,35.143
+N,H,Megiddo Junction,32.571,35.188
+N,I,Elyakim Junction,32.632,35.063
+N,J,Ramat Hashofet,32.600,35.093
+N,K,Ein HaShofet,32.595,35.100
+N,L,Tut Interchange,32.602,35.025
+N,M,Bat Shlomo,32.602,34.992
+N,N,Muhraqa,32.673,35.053
+N,O,Daliyat al-Karmel,32.695,35.045
+N,P,Isfiya,32.716,35.063
+N,Q,Kiryat Tivon,32.715,35.125
+N,R,Sde Yaakov,32.700,35.140
+N,S,Kfar Yehoshua,32.682,35.150
+N,T,Ramat Yishai,32.705,35.176
+N,U,Beit Shearim,32.703,35.160
+N,V,Alonim,32.722,35.145
+N,W,Yagur Junction,32.742,35.076
+N,X,Nesher,32.766,35.043
+N,Y,Fureidis Junction,32.600,34.952
+N,Z,Binyamina,32.518,34.950
+
+# Edges: fromId, toId, weight, bidirectional(true/false)
+E,A,B,25,true
+E,B,E,10,true
+E,A,I,35,true
+E,A,F,20,true
+E,B,Q,50,true
+E,F,G,40,true
+E,G,H,60,true
+E,I,L,40,true
+E,I,J,45,true
+E,J,K,10,true
+E,L,M,35,true
+E,M,Y,45,true
+E,Y,C,30,true
+E,Y,Z,80,true
+E,C,Z,60,true
+E,Q,R,25,true
+E,R,S,30,true
+E,Q,U,35,true
+E,U,T,20,true
+E,T,V,25,true
+E,Q,V,30,true
+E,N,O,40,true
+E,O,P,30,true
+E,P,X,80,true
+E,X,W,45,true
+E,W,B,100,true
+E,W,D,60,true
+E,X,D,50,true
+
+# --- One-Way Roads (bidirectional=false) ---
+E,J,G,45,false
+E,I,N,70,false
+E,D,X,55,false
+E,A,E,15,false
+E,C,M,40,false
+E,S,B,35,false
