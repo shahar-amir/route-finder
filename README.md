@@ -24,5 +24,5 @@ to explore graph algorithms and their real world applications.
 Work in progress.
 
 ## Authors
-Shahar Amir, Software Engineering student at Ben-Gurion University.
-Dor Jehassy, Information Systems Engineering student at Ben-Gurion University.
+- Shahar Amir, Software Engineering student at Ben-Gurion University.
+- Dor Jehassy, Information Systems Engineering student at Ben-Gurion University.
