@@ -9,11 +9,21 @@ public class Graph {
         adjacency.putIfAbsent(node, new ArrayList<>());
     }
 
-    public void addEdge(Node from, Node to, double weight, double lengthMeters, String streetName){
+    public void addEdge(Node from, Node to, double weight, double lengthMeters, String streetName) {
+        Objects.requireNonNull(from, "from must not be null");
+        Objects.requireNonNull(to, "to must not be null");
+        if (weight < 0) {
+            throw new IllegalArgumentException("Travel time must not be negative");
+        }
         addNode(from);
         addNode(to);
-        Edge edge = new Edge(from, to, weight, lengthMeters, streetName);
-        adjacency.get(from).add(edge);
+        adjacency.get(from).add(new Edge(from, to, weight, lengthMeters, streetName));
+    }
+
+    public void addBidirectionalEdge(Node a, Node b, double travelTime,
+                                     double lengthMeters, String streetName) {
+        addEdge(a, b, travelTime, lengthMeters, streetName);
+        addEdge(b, a, travelTime, lengthMeters, streetName);
     }
 
     public List<Edge> getNeighbors(Node node) {
