@@ -1,4 +1,4 @@
-#Nodes: id,name,lat,lon
+# Nodes: id,name,lat,lon
 N,A,Ort Alon,32.658,35.110
 N,B,Hatishbi Junction,32.677,35.105
 N,C,Zicron Yaakov,32.573,34.951
@@ -25,41 +25,50 @@ N,W,Yagur Junction,32.742,35.076
 N,X,Nesher,32.766,35.043
 N,Y,Fureidis Junction,32.600,34.952
 N,Z,Binyamina,32.518,34.950
+N,AA,Iron Interchange,32.500,35.050
+N,AB,Zichron Interchange,32.565,34.920
+N,AC,Atlit Interchange,32.690,34.940
 
-# Edges: fromId, toId, weight, bidirectional(true/false)
-E,A,B,25,true
-E,B,E,10,true
-E,A,I,35,true
-E,A,F,20,true
-E,B,Q,50,true
-E,F,G,40,true
-E,G,H,60,true
-E,I,L,40,true
-E,I,J,45,true
-E,J,K,10,true
-E,L,M,35,true
-E,M,Y,45,true
-E,Y,C,30,true
-E,Y,Z,80,true
-E,C,Z,60,true
-E,Q,R,25,true
-E,R,S,30,true
-E,Q,U,35,true
-E,U,T,20,true
-E,T,V,25,true
-E,Q,V,30,true
-E,N,O,40,true
-E,O,P,30,true
-E,P,X,80,true
-E,X,W,45,true
-E,W,B,100,true
-E,W,D,60,true
-E,X,D,50,true
+# Edges: fromId,toId,streetName,roadType,bidirectional
+E,A,B,Route 70,intercity,true
+E,B,E,Yokneam Road,local,true
+E,A,I,Route 70,intercity,true
+E,A,F,Route 66,intercity,true
+E,B,Q,Route 75,intercity,true
+E,F,G,Route 66,intercity,true
+E,G,H,Route 66,intercity,true
+E,I,L,Route 70,intercity,true
+E,I,J,Route 6522,regional,true
+E,J,K,Local Road,local,true
+E,L,M,Route 70,intercity,true
+E,M,Y,Route 70,intercity,true
+E,Y,C,Route 4,intercity,true
+E,Y,Z,Route 4,intercity,true
+E,C,Z,Route 4,intercity,true
+E,Q,R,Route 75,intercity,true
+E,R,S,Route 75,intercity,true
+E,Q,U,Route 722,regional,true
+E,U,T,Route 722,regional,true
+E,T,V,Local Road,local,true
+E,Q,V,Local Road,local,true
+E,N,O,Route 672,regional,true
+E,O,P,Route 672,regional,true
+E,P,X,Route 672,regional,true
+E,X,W,Route 75,intercity,true
+E,W,B,Route 75,intercity,true
+E,W,D,Route 75,intercity,true
+E,X,D,Route 75,intercity,true
+E,L,AA,Route 6,highway,true
+E,AA,H,Route 65,intercity,true
+E,AB,AC,Route 2,highway,true
+E,AC,X,Route 2,highway,true
+E,AB,Z,Route 652,regional,true
+E,AB,C,Route 652,regional,true
 
-# --- One-Way Roads (bidirectional=false) ---
-E,J,G,45,false
-E,I,N,70,false
-E,D,X,55,false
-E,A,E,15,false
-E,C,M,40,false
-E,S,B,35,false
+# One-Way Roads
+E,J,G,Route 6522,regional,false
+E,I,N,Route 672,regional,false
+E,D,X,Route 75,intercity,false
+E,A,E,Local Road,local,false
+E,C,M,Route 70,intercity,false
+E,S,B,Route 75,intercity,false
